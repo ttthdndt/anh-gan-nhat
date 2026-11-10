@@ -1,1 +1,13 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Điện thoại gửi ảnh · Ảnh Gần Nhất</title><link rel="stylesheet" href="style.css"><script defer src="https://cdn.jsdelivr.net/npm/peerjs@1.5.5/dist/peerjs.min.js"></script><script defer src="app.js"></script></head><body data-mode="send" class="tap-page"><header><div class="brand">Ảnh gần nhất · Máy gửi</div><div class="status" id="status" role="status" aria-live="polite"><span class="dot"></span><span id="statusText">Đang kết nối…</span></div></header><main class="send-wrap"><button class="tap-zone" type="button" id="tapZone"><span class="tap-symbol" aria-hidden="true">🖼️</span><span class="tap-title">CHẠM ĐỂ CHỌN ẢNH</span><span class="tap-note">Chạm bất kỳ chỗ nào trong vùng xanh. Điện thoại phát tiếng ting và mở bộ chọn ảnh.</span></button><input id="photoInput" type="file" accept="image/*"><section class="panel compact" id="roomFormSection"><h2>Mã phòng máy tính</h2><div class="room-row"><input id="roomInput" type="text" maxlength="12" autocomplete="off" spellcheck="false" inputmode="text" placeholder="Ví dụ: A7K3Q9PX" aria-label="Mã phòng"><button class="btn" id="connectRoom" type="button">Kết nối</button></div><p class="advice">Nếu URL đã có mã sau dấu #, bạn không cần nhập lại.</p></section><section class="panel compact"><h2>Trạng thái ảnh</h2><p id="photoStatus" aria-live="polite">Chưa chọn ảnh.</p></section><p class="footer-note">Website không tự xem thư viện. Bạn phải chọn ảnh và xác nhận trong bộ chọn của Android. Không gửi dữ liệu lên GitHub.</p></main></body></html>
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="referrer" content="no-referrer"><title>Gửi ảnh — Chạm để tải</title><link rel="stylesheet" href="style.css"></head>
+<body class="send-page">
+  <button class="tap-zone" id="tapZone" type="button" aria-label="Chạm vào đây để mở trình chọn ảnh. Có tiếng ting xác nhận.">
+    <span class="main-icon" aria-hidden="true">📸</span>
+    <span class="main-title">CHẠM ĐỂ GỬI ẢNH</span>
+    <span class="main-caption">Chạm một lần để mở ảnh · Chọn ảnh · Tự gửi lên máy tính</span>
+    <span class="send-status" id="status" role="status" aria-live="polite">Trang đã mở. Chạm bất kỳ đâu.</span>
+    <span class="mini">Web sẽ thử phát tiếng ting khi tải trang và phát tiếng khi chạm. Âm thanh tự phát có thể bị Chrome chặn.</span>
+  </button>
+  <input class="sr-file" id="fileInput" type="file" accept="image/*" aria-label="Chọn ảnh muốn gửi">
+  <script src="config.js"></script><script src="send.js"></script>
+</body></html>
